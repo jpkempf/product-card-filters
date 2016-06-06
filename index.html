@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Product Card Filters</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="masthead">
+        <div class="logo">
+            <img src="http://placehold.it/200x75/b6dccb/000000" alt="" />
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li>
+                    <a href="" class="active">menu item 1</a>
+                </li>
+                <li>
+                    <a href="">menu item 2</a>
+                </li>
+                <li>
+                    <a href="">menu item 3</a>
+                </li>
+                <li>
+                    <a href="">menu item 4</a>
+                </li>
+                <li>
+                    <a href="">menu item 5</a>
+                </li>
+                <li>
+                    <a href="">menu item 6</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="products">
+
+        <div class="product-filters" id="product-filters">
+            <span>Filter:</span>
+            <label class="pill pill--red" for="meat">
+                <input type="checkbox" name="meat" id="meat" checked /> Fleisch
+            </label>
+            <label class="pill pill--green" for="vegetables">
+                <input type="checkbox" name="vegetables" id="vegetables" checked /> Gemüse
+            </label>
+            <label class="pill pill--orange" for="fruit">
+                <input type="checkbox" name="fruit" id="fruit" checked /> Obst
+            </label>
+        </div>
+
+        <div class="product-cards">
+            <div class="media" data-product-category="fruit">
+                <div class="media__image">
+                    <img src="http://placehold.it/300x180/b6dccb/000000" alt="" />
+                </div>
+                <div class="media__body">
+                    <header class="media__body__head">
+                        <h2>
+                            Apfel
+                        </h2>
+                        <span class="pill pill--orange small">
+                            Obst
+                        </span>
+                    </header>
+                    <div class="media__body__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam placeat perspiciatis hic inventore rem, praesentium neque vero rerum quae illum eius fuga distinctio suscipit, doloribus, quas deserunt molestias earum quo?
+                    </div>
+                    <a href="" class="media__body__link">
+                        Mehr erfahren
+                    </a>
+                </div>
+            </div>
+            <div class="media" data-product-category="vegetables">
+                <div class="media__image">
+                    <img src="http://placehold.it/300x180/b6dccb/000000" alt="" />
+                </div>
+                <div class="media__body">
+                    <header class="media__body__head">
+                        <h2>
+                            Aubergine
+                        </h2>
+                        <span class="pill pill--green small">
+                            Gemüse
+                        </span>
+                    </header>
+                    <div class="media__body__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam placeat perspiciatis hic inventore rem, praesentium neque vero rerum quae illum eius fuga distinctio suscipit, doloribus, quas deserunt molestias earum quo?
+                    </div>
+                    <a href="" class="media__body__link">
+                        Mehr erfahren
+                    </a>
+                </div>
+            </div>
+            <div class="media" data-product-category="fruit">
+                <div class="media__image">
+                    <img src="http://placehold.it/300x180/b6dccb/000000" alt="" />
+                </div>
+                <div class="media__body">
+                    <header class="media__body__head">
+                        <h2>
+                            Banane
+                        </h2>
+                        <span class="pill pill--orange small">
+                            Obst
+                        </span>
+                    </header>
+                    <div class="media__body__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam placeat perspiciatis hic inventore rem, praesentium neque vero rerum quae illum eius fuga distinctio suscipit, doloribus, quas deserunt molestias earum quo?
+                    </div>
+                    <a href="" class="media__body__link">
+                        Mehr erfahren
+                    </a>
+                </div>
+            </div>
+            <div class="media" data-product-category="vegetables">
+                <div class="media__image">
+                    <img src="http://placehold.it/300x180/b6dccb/000000" alt="" />
+                </div>
+                <div class="media__body">
+                    <header class="media__body__head">
+                        <h2>
+                            Brokkoli
+                        </h2>
+                        <span class="pill pill--green small">
+                            Gemüse
+                        </span>
+                    </header>
+                    <div class="media__body__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam placeat perspiciatis hic inventore rem, praesentium neque vero rerum quae illum eius fuga distinctio suscipit, doloribus, quas deserunt molestias earum quo?
+                    </div>
+                    <a href="" class="media__body__link">
+                        Mehr erfahren
+                    </a>
+                </div>
+            </div>
+            <div class="media" data-product-category="meat">
+                <div class="media__image">
+                    <img src="http://placehold.it/300x180/b6dccb/000000" alt="" />
+                </div>
+                <div class="media__body">
+                    <header class="media__body__head">
+                        <h2>
+                            Huhn
+                        </h2>
+                        <span class="pill pill--red small">
+                            Fleisch
+                        </span>
+                    </header>
+                    <div class="media__body__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam placeat perspiciatis hic inventore rem, praesentium neque vero rerum quae illum eius fuga distinctio suscipit, doloribus, quas deserunt molestias earum quo?
+                    </div>
+                    <a href="" class="media__body__link">
+                        Mehr erfahren
+                    </a>
+                </div>
+            </div>
+            <div class="media" data-product-category="fruit">
+                <div class="media__image">
+                    <img src="http://placehold.it/300x180/b6dccb/000000" alt="" />
+                </div>
+                <div class="media__body">
+                    <header class="media__body__head">
+                        <h2>
+                            Orange
+                        </h2>
+                        <span class="pill pill--orange small">
+                            Obst
+                        </span>
+                    </header>
+                    <div class="media__body__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam placeat perspiciatis hic inventore rem, praesentium neque vero rerum quae illum eius fuga distinctio suscipit, doloribus, quas deserunt molestias earum quo?
+                    </div>
+                    <a href="" class="media__body__link">
+                        Mehr erfahren
+                    </a>
+                </div>
+            </div>
+            <div class="media" data-product-category="meat">
+                <div class="media__image">
+                    <img src="http://placehold.it/300x180/b6dccb/000000" alt="" />
+                </div>
+                <div class="media__body">
+                    <header class="media__body__head">
+                        <h2>
+                            Rind
+                        </h2>
+                        <span class="pill pill--red small">
+                            Fleisch
+                        </span>
+                    </header>
+                    <div class="media__body__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam placeat perspiciatis hic inventore rem, praesentium neque vero rerum quae illum eius fuga distinctio suscipit, doloribus, quas deserunt molestias earum quo?
+                    </div>
+                    <a href="" class="media__body__link">
+                        Mehr erfahren
+                    </a>
+                </div>
+            </div>
+            <div class="media" data-product-category="vegetables">
+                <div class="media__image">
+                    <img src="http://placehold.it/300x180/b6dccb/000000" alt="" />
+                </div>
+                <div class="media__body">
+                    <header class="media__body__head">
+                        <h2>
+                            Zucchini
+                        </h2>
+                        <span class="pill pill--green small">
+                            Gemüse
+                        </span>
+                    </header>
+                    <div class="media__body__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam placeat perspiciatis hic inventore rem, praesentium neque vero rerum quae illum eius fuga distinctio suscipit, doloribus, quas deserunt molestias earum quo?
+                    </div>
+                    <a href="" class="media__body__link">
+                        Mehr erfahren
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>

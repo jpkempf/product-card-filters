@@ -1,0 +1,189 @@
+/**
+ * VARS
+ */
+
+$brand-color: #b6dccb;
+$spacing-unit: 1rem;
+$half-spacing-unit: $spacing-unit * .5;
+$double-spacing-unit: $spacing-unit * 2;
+
+/**
+ * MIXINS
+ */
+
+@mixin margin-right() {
+    &:not(:last-child) {
+        margin-right: $spacing-unit;
+    }
+}
+
+/**
+ * BASIC LAYOUT
+ */
+
+// proper box sizing
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+// vertical rythm
+* {
+    margin-top: 0;
+    margin-bottom: $spacing-unit;
+}
+
+body {
+    background: $brand-color;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+[data-hidden] {
+    display: none;
+}
+
+.wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: $double-spacing-unit;
+    background: darken($brand-color, 10%);
+}
+
+// simple media object
+.media {
+    
+    &__image img {
+        width: 100%;
+    }
+    
+    &__body {
+        padding: 1em;
+        
+        &__head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+/**
+ * HEADER AND NAVIGATION
+ */
+
+.masthead {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+    .logo {
+        margin-right: $spacing-unit;
+    }
+    
+    .main-nav {
+        
+        a {
+            color: #000;
+            text-decoration: none;
+            
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                text-decoration: underline;
+            }
+        }
+        
+        ul {
+            padding: 0;
+        }
+        
+        li {
+            display: inline-block;
+            list-style: none;
+            @include margin-right;
+        }
+    }
+}
+
+/**
+ * PRODUCT FILTERS
+ */
+
+.product-filters {
+    margin-bottom: $double-spacing-unit;
+    
+    & > * {
+        display: block;
+        width: 100%;
+        
+        @media all and (min-width: 30em) {
+            display: inline-block;
+            width: auto;
+        }
+    }
+}
+
+.pill {
+    padding: $half-spacing-unit $spacing-unit;
+    border-radius: $spacing-unit;
+    background: #666;
+    color: #fff;
+    cursor: pointer;
+    @include margin-right;
+    
+    &--red {
+        background: rgb(240,0,0);
+    }
+    
+    &--green {
+        background: rgb(0,140,0);
+    }
+    
+    &--orange {
+        background: rgb(240,120,0);
+    }
+}
+
+
+/**
+ * PRODUCT CARDS
+ */
+
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    // to compensate for margin-right of children
+    margin-right: -$spacing-unit;
+    
+    .media {
+        background: #fff;
+        margin-bottom: $spacing-unit;
+        
+        @media all and (min-width: 35em) {
+            width: calc(50% - #{$spacing-unit});
+            @include margin-right;
+        }
+        
+        @media all and (min-width: 50em) {
+            width: calc(33% - #{$spacing-unit});
+        }
+        
+        @media all and (min-width: 75em) {
+            width: calc(25% - #{$spacing-unit});
+        }
+    }
+}
+
+/**
+ * UTILITY CLASSES
+ */
+
+.small {
+    transform: scale(.75);
+}
