@@ -1,27 +1,20 @@
-// find filter container
-var $filterContainer = document.getElementById('product-filters');
+(function() {
+    'use strict';
+    
+    var $filterContainer = document.getElementById('product-filters');
+    var $filters = [].slice.call($filterContainer.querySelectorAll('input'));
 
-// find filters, cast NodeList to Array
-var $filters = [].slice.call($filterContainer.querySelectorAll('input'));
+    $filters.forEach(function(filter) {
+        filter.addEventListener('click', filterProducts);
+    });
 
-// bind click events to filters
-$filters.forEach(function(filter) {
-    filter.addEventListener('click', function(event) {
-        
-        // get filter type and status
+    function filterProducts(event) {
         var filterType = event.currentTarget.name;
         var filterStatus = event.currentTarget.checked;
-        
-        // find products for the clicked filter...
-        var $filteredProducts = [].slice.call(document.querySelectorAll(`[data-product-category=${filterType}]`));
+        var $filteredProducts = [].slice.call(document.querySelectorAll('[data-product-category=' + filterType + ']'));
 
-        // ...and toggle them by setting or removing [data-hidden] attribute
-        $filteredProducts.forEach(function(product) {
-            if (!filterStatus) {
-                product.dataset.hidden = true;
-            } else {
-                delete product.dataset.hidden;
-            }
-        })
-    })
-});
+        $filteredProducts.forEach(function(product){
+            product.dataset.hidden = !filterStatus;
+        });
+    }
+})();
